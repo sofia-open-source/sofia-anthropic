@@ -1,1 +1,1 @@
-# sofia-fin-system-api-anthropic-plugin
+# sofia-anthropic-plugin
