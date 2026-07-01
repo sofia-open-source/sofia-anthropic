@@ -1,0 +1,28 @@
+{
+  "$schema": "https://catalog.lintel.tools/schemas/claude-code/marketplace/latest.json",
+  "name": "sofia-plugins",
+  "metadata": {
+    "description": "Plugins oficiais da Sofia para Claude Code.",
+    "version": "1.4.32"
+  },
+  "owner": {
+    "name": "Sofia Open Source"
+  },
+  "plugins": [
+    {
+      "name": "sofia-anthropic",
+      "source": "./",
+      "description": "Sofia Fin System API skill for Claude Code — bank accounts, financial records, invoices, reconciliation, and analytics.",
+      "version": "1.4.32",
+      "author": {
+        "name": "Sofia Open Source",
+        "url": "https://github.com/sofia-open-source"
+      },
+      "homepage": "https://github.com/sofia-open-source/sofia-anthropic",
+      "repository": "https://github.com/sofia-open-source/sofia-anthropic",
+      "license": "MIT",
+      "category": "integration",
+      "tags": ["sofia", "finance", "api", "open-finance", "reconciliation"]
+    }
+  ]
+}
