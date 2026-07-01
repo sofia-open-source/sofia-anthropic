@@ -1,0 +1,143 @@
+# InstallmentFinancialRecordPageResponseDto
+
+**Type:** object
+
+## Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `items` | object[] | Yes |  |
+| `pageInfo` | object | Yes |  |
+
+## Nested Fields
+
+### `items`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | Yes | Installment financial record identifier. |
+| `ownerOrganization` | string | Yes | Identifier of the organization that owns the record. |
+| `direction` | enum: IN, OUT | Yes | Record direction (income/expense). |
+| `frequency` | enum: MONTHLY, WEEKLY, YEARLY | Yes | Record frequency. |
+| `firstInstallmentDate` | string | No | First installment due date of the record. |
+| `contact` | string | Yes | Related contact identifier. |
+| `description` | string | Yes | Record description. |
+| `subcategory` | string | Yes | Subcategory identifier. |
+| `amount` | string | No |  |
+| `tags` | string[] | No | Related tags. |
+| `competenceDate` | string | No | Record competence date. |
+| `files` | string[] | No | Attached files. |
+| `numberOfInstallments` | number | Yes | Number of installments. |
+| `installments` | object[] | Yes | Record installments. |
+| `createdAt` | string | Yes | Creation date of the installment financial record. |
+| `updatedAt` | string | Yes | Last update date of the installment financial record. |
+| `searchScore` | number | No | Record search score. |
+| `populatedSubcategory` | object | No | Record subcategory. |
+| `populatedContact` | object | No | Record contact. |
+| `populatedTags` | object[] | No | Related tags. |
+| `observations` | string | No | Installment financial record observations. |
+| `populatedFiles` | object[] | No | Attached files. |
+| `externalId` | string | No | External identifier of the installment financial record. |
+| `finalAmount` | string | No |  |
+| `discount` | string | No |  |
+| `finesAndInterest` | string | No |  |
+
+#### `items.installments`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `dueDate` | string | No | Installment due date. |
+| `amount` | string | Yes | Installment amount. |
+| `description` | string | No | Custom installment description. |
+
+#### `items.populatedSubcategory`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | Yes | Identificador da subcategoria. |
+| `ownerOrganization` | string | Yes | Identificador da organização dona da subcategoria. |
+| `name` | string | Yes | Nome da subcategoria. |
+| `slug` | string | Yes | Slug da subcategoria. |
+| `index` | number | Yes | Índice da subcategoria. |
+| `category` | string | Yes | Identificador da categoria. |
+| `populatedCategory` | object | No | Categoria da subcategoria. |
+| `normalizedSubcategory` | string | No | Identificador da subcategoria normalizada. |
+| `populatedNormalizedSubcategory` | object | No | Subcategoria normalizada. |
+| `considerInDre` | boolean | Yes | Indica se a subcategoria deve ser exibida no DRE. |
+| `isInternalTransfer` | boolean | No | Indica se a subcategoria representa uma transferência interna. |
+| `description` | string | Yes | Descrição da subcategoria. |
+| `active` | boolean | No | Indica se a subcategoria está ativa. |
+| `searchScore` | number | No | Pontuação de busca da subcategoria. |
+| `createdAt` | any | Yes | Data de criação da subcategoria. |
+| `updatedAt` | any | Yes | Data de atualização da subcategoria. |
+| `importedAt` | any | No | Data de importação da subcategoria. |
+| `importedBy` | string | No | Origem da importação da subcategoria. |
+| `externalId` | string | No | Identificador externo da subcategoria. |
+
+#### `items.populatedContact`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | Yes | Contact identifier. |
+| `ownerOrganization` | string | Yes | Identifier of the organization that owns the contact. |
+| `name` | string | Yes | Contact name. |
+| `types` | string[] | Yes | Contact types. |
+| `documentType` | enum: CNPJ, CPF | No | Contact document type. |
+| `document` | string | No | Contact document. |
+| `email` | string | No | Contact email. |
+| `phone` | string | No | Contact phone. |
+| `pixKeys` | string[] | Yes | Contact PIX keys. |
+| `birthDate` | any | No | Contact birth date. |
+| `origin` | enum: INDICATION, ADS, ORGANIC_SEARCH... | No | Contact origin. |
+| `address` | object | No | Contact address. |
+| `isNotIdentified` | boolean | Yes | Whether the contact is the unidentified contact. |
+| `searchScore` | number | No | Contact search score. |
+| `createdAt` | any | Yes | Creation date of the contact. |
+| `updatedAt` | any | Yes | Last update date of the contact. |
+| `importedAt` | any | No | Contact import date. |
+| `importedBy` | string | No | Contact import source. |
+| `externalId` | string | No | External identifier of the contact. |
+| `observations` | string | No | Contact observations. |
+
+#### `items.populatedTags`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | Yes | Tag identifier. |
+| `ownerOrganization` | string | Yes | Identifier of the organization that owns the tag. |
+| `name` | string | Yes | Tag name. |
+| `createdAt` | any | Yes | Creation date of the tag. |
+| `updatedAt` | any | Yes | Last update date of the tag. |
+| `searchScore` | number | No | Text search score. |
+| `importedAt` | any | No | Tag import date. |
+| `importedBy` | string | No | Tag import source. |
+| `externalId` | string | No | External identifier of the tag. |
+
+#### `items.populatedFiles`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `id` | string | Yes | Identificador do arquivo. |
+| `ownerOrganization` | string | Yes | Identificador da organização dona do arquivo. |
+| `originalFileName` | string | Yes | Nome original do arquivo. |
+| `mimeType` | string | Yes | Tipo MIME do arquivo. |
+| `size` | number | Yes | Tamanho do arquivo em bytes. |
+| `fileType` | enum: DEFAULT, FINANCIAL_RECORD, EXPORT... | Yes | Tipo do arquivo. |
+| `objectName` | string | Yes | Nome do objeto no storage. |
+| `status` | enum: PENDING, COMPLETED, FAILED... | Yes | Status do arquivo. |
+| `caption` | string | No | Legenda do arquivo. |
+| `createdAt` | any | Yes | Data de criação do arquivo. |
+| `updatedAt` | any | Yes | Data de atualização do arquivo. |
+| `deletedAt` | any | No | Data de exclusão do arquivo. |
+| `url` | string | Yes | URL do arquivo. |
+| `signedUrl` | string | Yes | URL assinada do arquivo. |
+
+### `pageInfo`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `pageIndex` | number | Yes |  |
+| `pageSize` | number | Yes |  |
+| `totalPages` | number | Yes |  |
+| `totalItems` | number | Yes |  |
+
