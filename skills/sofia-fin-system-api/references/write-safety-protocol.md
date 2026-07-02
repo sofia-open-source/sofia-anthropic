@@ -4,6 +4,7 @@ For any operation that **writes** (create/update/delete, reconcile, bulk operati
 flow. This is especially important for customers operating on real data.
 
 ## Standard flow
+
 1. **Resolve names to ids** when the user refers to names (contact/account/subcategory):
    use `coreFindAllContacts`, `coreFindAllBankAccounts`, or `coreFindAllSubcategories` with text search.
 2. **Show the affected organization** before anything else: always display `Organization: <name>`
@@ -22,11 +23,13 @@ flow. This is especially important for customers operating on real data.
    poll the job and read the failures.
 
 ## Reuse one call vs loop
+
 - **Same new value for all records**: one `corePartialUpdateManyFinancialRecords` call.
 - **Different value per record**: loop over `corePartialUpdateFinancialRecord`, but ask for **one**
   confirmation. Partial failure is possible here, so the snapshot enables undo.
 
 ## Filter transparency (always)
+
 Every listing/report/batch must declare filters in Portuguese and **translate relative dates
 to absolute dates**. Example: "payments next week" becomes
 `Direção: Saída; Data de vencimento: entre DD/MM/AAAA e DD/MM/AAAA; Concluído: Não`.
@@ -34,5 +37,6 @@ Make it clear which date field was used (due vs accrual vs cash date) and state 
 explicitly ("considerei só os não pagos").
 
 ## Undo
+
 Revert using the snapshot: reapply the old values with `corePartialUpdateFinancialRecord`;
 for `CREATE`, unreconcile if needed and then call `coreRemoveFinancialRecord` for the created ids.

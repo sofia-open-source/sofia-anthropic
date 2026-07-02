@@ -1,7 +1,7 @@
 {
   "name": "sofia-anthropic",
   "description": "Sofia Fin System API skill for Claude Code — bank accounts, financial records, invoices, reconciliation, and analytics.",
-  "version": "1.4.35",
+  "version": "1.4.36",
   "author": {
     "name": "Sofia Open Source",
     "url": "https://github.com/sofia-open-source"
