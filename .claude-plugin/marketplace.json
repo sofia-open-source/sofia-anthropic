@@ -3,7 +3,7 @@
   "name": "sofia-plugins",
   "metadata": {
     "description": "Plugins oficiais da Sofia para Claude Code.",
-    "version": "1.4.37"
+    "version": "1.4.38"
   },
   "owner": {
     "name": "Sofia Open Source"
@@ -13,7 +13,7 @@
       "name": "sofia-anthropic",
       "source": "./",
       "description": "Sofia Fin System API skill for Claude Code — bank accounts, financial records, invoices, reconciliation, and analytics.",
-      "version": "1.4.37",
+      "version": "1.4.38",
       "author": {
         "name": "Sofia Open Source",
         "url": "https://github.com/sofia-open-source"

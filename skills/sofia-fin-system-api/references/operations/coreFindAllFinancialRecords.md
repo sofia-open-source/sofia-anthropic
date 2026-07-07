@@ -42,6 +42,7 @@
 | `includeNoTags` | query | boolean | No | When true, also matches financial records with no tags (empty or missing). With tag IDs, matches selected tags OR no tags; with no tag IDs, matches only records without tags. |
 | `installmentFinancialRecord` | query | string[] | No | Lista de IDs de parcelas para filtrar. |
 | `recurringFinancialRecord` | query | string[] | No | Lista de IDs de recorrências para filtrar. |
+| `recurringOccurrenceNumber` | query | integer | No |  |
 | `queryId` | query | string | No | ID da consulta a ser aplicada. |
 | `hiddenColumnsForPdfReport` | query | string[] | No | Lista de colunas para esconder no PDF separadas por vírgula (contact, category). |
 

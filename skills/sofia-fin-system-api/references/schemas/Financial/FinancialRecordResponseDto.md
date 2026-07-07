@@ -42,6 +42,7 @@
 | `installmentFinancialRecord` | string | No | Identificador do lançamento financeiro parcelado. |
 | `installmentNumber` | number | No | Índice da parcela (1, 2, 3, etc.). |
 | `recurringFinancialRecord` | string | No | Identificador do lançamento financeiro recorrente. |
+| `recurringOccurrenceNumber` | integer | No | Occurrence index within the recurring template (0 = first occurrence). |
 | `createdAt` | string | Yes | Creation date of the financial record. |
 | `updatedAt` | string | Yes | Last update date of the financial record. |
 | `populatedFiles` | object[] | No | Arquivos anexados. |

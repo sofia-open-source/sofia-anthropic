@@ -28,9 +28,6 @@
 | `subcategoryHints` | string | No | Dicas de busca com nomes de subcategorias/categorias para facilitar buscas textuais. |
 | `bankAccountHints` | string | No | Dicas de busca com nomes e números de contas bancárias para facilitar buscas textuais. |
 | `tagsHints` | string | No | Dicas de busca com nomes de tags para facilitar buscas textuais. |
-| `installmentFinancialRecord` | string | No | Identificador do lançamento financeiro parcelado. |
-| `installmentNumber` | number | No | Índice da parcela (1, 2, 3, etc.). |
-| `recurringFinancialRecord` | string | No | Identificador do lançamento financeiro recorrente. |
 | `populatedFiles` | object[] | No | Arquivos anexados. |
 | `populatedSubcategory` | object | No | Subcategoria do lançamento. |
 | `populatedContact` | object | No | Contato relacionado. |
