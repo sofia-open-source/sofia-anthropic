@@ -26,7 +26,7 @@
 | `direction` | enum: IN, OUT | Yes | Direção do lançamento (entrada/saída). |
 | `dueDate` | any | No | Data de vencimento. |
 | `dueDateVariations` | string | No | Variações da data de vencimento. |
-| `contact` | string | Yes | Identificador do contato relacionado, quando houver. |
+| `contact` | string | Yes | Identificador do contato relacionado. |
 | `description` | string | Yes | Descrição do lançamento. |
 | `subcategory` | string | Yes | Identificador da subcategoria. |
 | `amount` | any | No | Valor do lançamento. É o valor em centavos. Exemplo: 10032 para R$ 100,32 |
@@ -103,8 +103,6 @@
 | `index` | number | Yes | Índice da subcategoria. |
 | `category` | string | Yes | Identificador da categoria. |
 | `populatedCategory` | object | No | Categoria da subcategoria. |
-| `subgroup` | string | No | Identificador do subgrupo. |
-| `populatedSubgroup` | object | No | Subgrupo da subcategoria. |
 | `normalizedSubcategory` | string | No | Identificador da subcategoria normalizada. |
 | `populatedNormalizedSubcategory` | object | No | Subcategoria normalizada. |
 | `considerInDre` | boolean | Yes | Indica se a subcategoria deve ser exibida no DRE. |

@@ -10,7 +10,6 @@
 | `resource` | enum: core_FinancialRecords, core_Contacts, core_BankAccounts... | Yes | Resource to be updated. |
 | `ids` | string[] | Yes | Identifiers of the records to be updated. |
 | `payload` | object | Yes | Values to be updated. |
-| `channel` | enum: WEB_APP, WHATSAPP, SYSTEM... | No | Canal de origem da operação |
 | `requesterUserId` | string | Yes | Identifier of the user who requested the update. |
 | `radarItem` | string | No | Identifier of the radar item that originated the bulk update. |
 | `createdAt` |  | Yes | Creation date of the bulk update job request. |

@@ -53,10 +53,6 @@
 | `externalId` | string | No | Identificador externo do lançamento financeiro. |
 | `radarItem` | string | No | Identificador do item no radar que originou a atualização. |
 | `radarItems` | string[] | No | Ids de itens no radar relacionados (substitui a lista atual). |
-| `dueDateAdjustment` | object | No | Increase or decrease dueDate relative to the current value. |
-| `competenceDateAdjustment` | object | No | Increase or decrease competenceDate relative to the current value. |
-| `cashDateAdjustment` | object | No | Increase or decrease cashDate relative to the current value. |
-| `amountAdjustment` | object | No | Increase or decrease amount relative to the current value. |
 
 #### `data.populatedFiles`
 
@@ -88,8 +84,6 @@
 | `index` | number | Yes | Índice da subcategoria. |
 | `category` | string | Yes | Identificador da categoria. |
 | `populatedCategory` | object | No | Categoria da subcategoria. |
-| `subgroup` | string | No | Identificador do subgrupo. |
-| `populatedSubgroup` | object | No | Subgrupo da subcategoria. |
 | `normalizedSubcategory` | string | No | Identificador da subcategoria normalizada. |
 | `populatedNormalizedSubcategory` | object | No | Subcategoria normalizada. |
 | `considerInDre` | boolean | Yes | Indica se a subcategoria deve ser exibida no DRE. |
@@ -180,36 +174,4 @@
 | `type` | enum: INTERNAL_TRANSFER, OTHER | Yes |  |
 | `description` | string | Yes |  |
 | `financialRecords` | string[] | No | Ids de lançamentos financeiros relacionados. |
-
-#### `data.dueDateAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the date. |
-| `value` | integer | Yes | How many units to adjust the date by. |
-| `unit` | enum: days, weeks, months | Yes | Unit used for the date adjustment. |
-
-#### `data.competenceDateAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the date. |
-| `value` | integer | Yes | How many units to adjust the date by. |
-| `unit` | enum: days, weeks, months | Yes | Unit used for the date adjustment. |
-
-#### `data.cashDateAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the date. |
-| `value` | integer | Yes | How many units to adjust the date by. |
-| `unit` | enum: days, weeks, months | Yes | Unit used for the date adjustment. |
-
-#### `data.amountAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the amount. |
-| `value` | string | Yes | Adjustment magnitude. For fixed, cents as a positive integer string. For percent, percentage points with up to 2 decimal places (e.g. 10.5). |
-| `unit` | enum: fixed, percent | Yes | Whether the value is a fixed cents delta or a percentage of the current amount. |
 

@@ -42,10 +42,6 @@
 | `externalId` | string | No | Identificador externo do lançamento financeiro. |
 | `radarItem` | string | No | Identificador do item no radar que originou a atualização. |
 | `radarItems` | string[] | No | Ids de itens no radar relacionados (substitui a lista atual). |
-| `dueDateAdjustment` | object | No | Increase or decrease dueDate relative to the current value. |
-| `competenceDateAdjustment` | object | No | Increase or decrease competenceDate relative to the current value. |
-| `cashDateAdjustment` | object | No | Increase or decrease cashDate relative to the current value. |
-| `amountAdjustment` | object | No | Increase or decrease amount relative to the current value. |
 | `channel` | enum: WEB_APP, WHATSAPP, SYSTEM... | Yes | Canal de origem da operação |
 
 ## Nested Fields
@@ -80,8 +76,6 @@
 | `index` | number | Yes | Índice da subcategoria. |
 | `category` | string | Yes | Identificador da categoria. |
 | `populatedCategory` | object | No | Categoria da subcategoria. |
-| `subgroup` | string | No | Identificador do subgrupo. |
-| `populatedSubgroup` | object | No | Subgrupo da subcategoria. |
 | `normalizedSubcategory` | string | No | Identificador da subcategoria normalizada. |
 | `populatedNormalizedSubcategory` | object | No | Subcategoria normalizada. |
 | `considerInDre` | boolean | Yes | Indica se a subcategoria deve ser exibida no DRE. |
@@ -100,26 +94,12 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Category identifier. |
-| `ownerOrganization` | string | Yes | Identifier of the organization that owns the group. |
 | `direction` | enum: IN, OUT | Yes | Category direction (IN or OUT). |
 | `index` | number | Yes | Category index. |
 | `name` | string | Yes | Category name. |
 | `slug` | string | Yes | Category slug. |
 | `createdAt` | any | Yes | Creation date of the category. |
 | `updatedAt` | any | Yes | Last update date of the category. |
-
-#### `populatedSubcategory.populatedSubgroup`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | Yes | Subgroup identifier. |
-| `ownerOrganization` | string | Yes | Identifier of the organization that owns the subgroup. |
-| `group` | string | Yes | Identifier of the parent group (Category) this subgroup belongs to. |
-| `name` | string | Yes | Subgroup name. |
-| `slug` | string | Yes | Subgroup slug. |
-| `position` | number | Yes | Subgroup position, used for ordering within its parent group. |
-| `createdAt` | any | Yes | Creation date of the subgroup. |
-| `updatedAt` | any | Yes | Last update date of the subgroup. |
 
 #### `populatedSubcategory.populatedNormalizedSubcategory`
 
@@ -245,36 +225,4 @@
 | `type` | enum: INTERNAL_TRANSFER, OTHER | Yes |  |
 | `description` | string | Yes |  |
 | `financialRecords` | string[] | No | Ids de lançamentos financeiros relacionados. |
-
-### `dueDateAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the date. |
-| `value` | integer | Yes | How many units to adjust the date by. |
-| `unit` | enum: days, weeks, months | Yes | Unit used for the date adjustment. |
-
-### `competenceDateAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the date. |
-| `value` | integer | Yes | How many units to adjust the date by. |
-| `unit` | enum: days, weeks, months | Yes | Unit used for the date adjustment. |
-
-### `cashDateAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the date. |
-| `value` | integer | Yes | How many units to adjust the date by. |
-| `unit` | enum: days, weeks, months | Yes | Unit used for the date adjustment. |
-
-### `amountAdjustment`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `direction` | enum: increase, decrease | Yes | Whether to increase or decrease the amount. |
-| `value` | string | Yes | Adjustment magnitude. For fixed, cents as a positive integer string. For percent, percentage points with up to 2 decimal places (e.g. 10.5). |
-| `unit` | enum: fixed, percent | Yes | Whether the value is a fixed cents delta or a percentage of the current amount. |
 

@@ -1,6 +1,6 @@
 # Create Schemas
 
-28 schemas in this group.
+26 schemas in this group.
 
 | Schema | Type | Description |
 |--------|------|-------------|
@@ -11,8 +11,6 @@
 | [CreateLegalEntityRequestBodyDto](CreateLegalEntityRequestBodyDto.md) | object |  |
 | [CreateLegalEntityServiceCodeAttributionRequestBodyDto](CreateLegalEntityServiceCodeAttributionRequestBodyDto.md) | object |  |
 | [CreateContactRequestBodyDto](CreateContactRequestBodyDto.md) | object |  |
-| [CreateCategoryRequestBodyDto](CreateCategoryRequestBodyDto.md) | object |  |
-| [CreateSubgroupRequestBodyDto](CreateSubgroupRequestBodyDto.md) | object |  |
 | [CreateTagRequestBodyDto](CreateTagRequestBodyDto.md) | object |  |
 | [CreateOrganizationRequestBodyDto](CreateOrganizationRequestBodyDto.md) | object |  |
 | [CreateInviteRequestBodyDto](CreateInviteRequestBodyDto.md) | object |  |

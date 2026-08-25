@@ -82,8 +82,6 @@
 | `index` | number | Yes | Índice da subcategoria. |
 | `category` | string | Yes | Identificador da categoria. |
 | `populatedCategory` | object | No | Categoria da subcategoria. |
-| `subgroup` | string | No | Identificador do subgrupo. |
-| `populatedSubgroup` | object | No | Subgrupo da subcategoria. |
 | `normalizedSubcategory` | string | No | Identificador da subcategoria normalizada. |
 | `populatedNormalizedSubcategory` | object | No | Subcategoria normalizada. |
 | `considerInDre` | boolean | Yes | Indica se a subcategoria deve ser exibida no DRE. |
@@ -102,26 +100,12 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Category identifier. |
-| `ownerOrganization` | string | Yes | Identifier of the organization that owns the group. |
 | `direction` | enum: IN, OUT | Yes | Category direction (IN or OUT). |
 | `index` | number | Yes | Category index. |
 | `name` | string | Yes | Category name. |
 | `slug` | string | Yes | Category slug. |
 | `createdAt` | any | Yes | Creation date of the category. |
 | `updatedAt` | any | Yes | Last update date of the category. |
-
-#### `populatedSubcategory.populatedSubgroup`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | Yes | Subgroup identifier. |
-| `ownerOrganization` | string | Yes | Identifier of the organization that owns the subgroup. |
-| `group` | string | Yes | Identifier of the parent group (Category) this subgroup belongs to. |
-| `name` | string | Yes | Subgroup name. |
-| `slug` | string | Yes | Subgroup slug. |
-| `position` | number | Yes | Subgroup position, used for ordering within its parent group. |
-| `createdAt` | any | Yes | Creation date of the subgroup. |
-| `updatedAt` | any | Yes | Last update date of the subgroup. |
 
 #### `populatedSubcategory.populatedNormalizedSubcategory`
 
