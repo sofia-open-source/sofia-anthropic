@@ -16,6 +16,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Category identifier. |
+| `ownerOrganization` | string | Yes | Identifier of the organization that owns the group. |
 | `direction` | enum: IN, OUT | Yes | Category direction (IN or OUT). |
 | `index` | number | Yes | Category index. |
 | `name` | string | Yes | Category name. |

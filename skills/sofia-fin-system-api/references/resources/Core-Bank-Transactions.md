@@ -19,4 +19,5 @@ Imported bank statement lines from OFX manual import or open finance (Pluggy), u
 | POST | `/core/bank-transactions/bulk-operations` | Agenda uma operação em lote para transações bancárias. | [View](../operations/coreScheduleBulkBankTransactionsOperation.md) |
 | GET | `/core/financial-records/{financialRecordId}/ai-suggestions` | Busca sugestões de AI por ID do lançamento financeiro. | [View](../operations/coreFindAiSuggestionsByFinancialRecordId.md) |
 | POST | `/core/bank-transactions/ofx/job-requests/{id}/retry` | Reexecuta a importação de um job request de OFX. | [View](../operations/coreRetryOfxImport.md) |
+| DELETE | `/core/bank-transactions/ofx/job-requests/{id}` | Remove uma importação OFX e as transações importadas por ela. | [View](../operations/coreRemoveOfxImportJobRequest.md) |
 | GET | `/core/bank-transactions/ofx/job-executions/{id}/failures/download` | Baixa as falhas de uma execução de importação OFX em Excel. | [View](../operations/coreDownloadOfxImportFailures.md) |

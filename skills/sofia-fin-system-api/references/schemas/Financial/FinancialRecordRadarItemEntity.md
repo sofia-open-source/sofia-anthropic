@@ -261,6 +261,8 @@
 | `index` | number | Yes | Índice da subcategoria. |
 | `category` | string | Yes | Identificador da categoria. |
 | `populatedCategory` | object | No | Categoria da subcategoria. |
+| `subgroup` | string | No | Identificador do subgrupo. |
+| `populatedSubgroup` | object | No | Subgrupo da subcategoria. |
 | `normalizedSubcategory` | string | No | Identificador da subcategoria normalizada. |
 | `populatedNormalizedSubcategory` | object | No | Subcategoria normalizada. |
 | `considerInDre` | boolean | Yes | Indica se a subcategoria deve ser exibida no DRE. |
@@ -478,7 +480,7 @@
 | `direction` | enum: IN, OUT | Yes | Direção do lançamento (entrada/saída). |
 | `dueDate` | any | No | Data de vencimento. |
 | `dueDateVariations` | string | No | Variações da data de vencimento. |
-| `contact` | string | Yes | Identificador do contato relacionado. |
+| `contact` | string | Yes | Identificador do contato relacionado, quando houver. |
 | `description` | string | Yes | Descrição do lançamento. |
 | `subcategory` | string | Yes | Identificador da subcategoria. |
 | `amount` | any | No | Valor do lançamento. É o valor em centavos. Exemplo: 10032 para R$ 100,32 |
@@ -534,7 +536,7 @@
 | `direction` | enum: IN, OUT | Yes | Direção do lançamento (entrada/saída). |
 | `dueDate` | any | No | Data de vencimento. |
 | `dueDateVariations` | string | No | Variações da data de vencimento. |
-| `contact` | string | Yes | Identificador do contato relacionado. |
+| `contact` | string | Yes | Identificador do contato relacionado, quando houver. |
 | `description` | string | Yes | Descrição do lançamento. |
 | `subcategory` | string | Yes | Identificador da subcategoria. |
 | `amount` | any | No | Valor do lançamento. É o valor em centavos. Exemplo: 10032 para R$ 100,32 |
@@ -589,6 +591,7 @@
 | `resource` | enum: core_FinancialRecords, core_Contacts, core_BankAccounts... | Yes | Recurso a ser criado. |
 | `nRows` | number | Yes | Número de linhas a serem criadas. |
 | `fileId` | string | Yes | Identificador do arquivo com dados para criação. |
+| `channel` | enum: WEB_APP, WHATSAPP, SYSTEM... | No | Canal de origem da operação |
 | `requesterUserId` | string | Yes | Identificador do usuário que solicitou a criação. |
 | `radarItem` | string | No | Identificador do registro de radar que originou a criação em massa. |
 | `createdAt` | any | Yes | Data de criação da solicitação de criação. |
@@ -604,7 +607,7 @@
 | `direction` | enum: IN, OUT | Yes | Direção do lançamento (entrada/saída). |
 | `dueDate` | any | No | Data de vencimento. |
 | `dueDateVariations` | string | No | Variações da data de vencimento. |
-| `contact` | string | Yes | Identificador do contato relacionado. |
+| `contact` | string | Yes | Identificador do contato relacionado, quando houver. |
 | `description` | string | Yes | Descrição do lançamento. |
 | `subcategory` | string | Yes | Identificador da subcategoria. |
 | `amount` | any | No | Valor do lançamento. É o valor em centavos. Exemplo: 10032 para R$ 100,32 |
