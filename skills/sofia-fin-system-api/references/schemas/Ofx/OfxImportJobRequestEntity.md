@@ -7,6 +7,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | Yes | Identificador da solicitação de importação OFX. |
+| `operationState` | enum: QUEUED, PROCESSING, FINISHED... | No | Internal operation state used to serialize competing OFX import operations. |
 | `bankAccountId` | string | Yes | Identificador da conta bancária. |
 | `bankAccountName` | string | Yes | Nome da conta bancária. |
 | `fileName` | string | Yes | Nome do arquivo OFX. |

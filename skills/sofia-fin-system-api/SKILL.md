@@ -2,7 +2,7 @@
 name: sofia-fin-system-api
 description: Sofia API for financial management of bussiness. Provides management of bank accounts, financial records (in/out/paid/to be paid), invoices, contacts etc. Provides reports and bank reconciliation. Use when working with the Sofia Fin System API or when the user needs to interact with this API.
 metadata:
-  api-version: "1.4.47"
+  api-version: "1.5.0"
   openapi-version: "3.0.0"
 ---
 
@@ -17,9 +17,9 @@ This API documentation is split into multiple files for on-demand loading.
 **Directory structure:**
 ```
 references/
-├── resources/      # 33 resource index files
-├── operations/     # 134 operation detail files
-├── schemas/        # 74 schema groups, 200 schema files
+├── resources/      # 34 resource index files
+├── operations/     # 137 operation detail files
+├── schemas/        # 81 schema groups, 215 schema files
 ├── business-rules.md
 ├── write-safety-protocol.md
 └── workflows/      # Guided multi-step API workflows
@@ -49,7 +49,7 @@ Supported methods: bearer token on header. See `references/authentication.md` fo
 
 ## Resources
 
-- **Core - Bank Transactions** → `references/resources/Core-Bank-Transactions.md` (14 ops) - Imported bank statement lines from OFX manual import or open finance (Pluggy), used to reconcile against financial records. CRUD-style read/update/delete, reconcile and unreconcile, bulk archive/unarchive/reconcile, and AI-suggested actions for matching. OFX import flows schedule jobs, list executions, retry failures, and download failure reports. System endpoints support provider-driven create-or-update for integrated feeds.
+- **Core - Bank Transactions** → `references/resources/Core-Bank-Transactions.md` (15 ops) - Imported bank statement lines from OFX manual import or open finance (Pluggy), used to reconcile against financial records. CRUD-style read/update/delete, reconcile and unreconcile, bulk archive/unarchive/reconcile, and AI-suggested actions for matching. OFX import flows schedule jobs, list executions, retry failures, and download failure reports. System endpoints support provider-driven create-or-update for integrated feeds.
 - **Core - Financial Records** → `references/resources/Core-Financial-Records.md` (11 ops) - The main resource of the system, represents an amount (paid/received/to be payed/to be received) for the organization on the system. It is used in the majority of all reports and is linked to many other resources like contacts, tags, bank transactions, radar items etc.
 - **Core - Legal entities** → `references/resources/Core-Legal-entities.md` (8 ops) - Legal entities (CNPJ) and fiscal registration data for the organization. CRUD, set default entity for invoicing, and get/patch Focus NFSe RPS settings per entity. Required for NFSe issuance and provider configuration. One organization may hold multiple entities but typically invoices from the default.
 - **Core - Contacts** → `references/resources/Core-Contacts.md` (8 ops) - People and companies (customers, suppliers, employees) linked to financial records. Full CRUD plus paginated list, find-by-id, and org-scoped lookups. Reference endpoints expose contact types and origins. Includes lookup of the special not-identified contact used when no counterparty is known.
@@ -64,10 +64,11 @@ Supported methods: bearer token on header. See `references/authentication.md` fo
 - **Toolkit - Files upload** → `references/resources/Toolkit-Files-upload.md` (4 ops) - Two-step upload to Google Cloud Storage. Create upload request returns fileId and a signed PUT URL; after the client uploads bytes, confirm upload marks the file complete. User routes live under /toolkit/files/upload; system routes under /toolkit/organizations/:organizationId/files/upload for cross-service uploads. Used by bulk import, attachments, and export download prep.
 - **Toolkit - Files** → `references/resources/Toolkit-Files.md` (4 ops) - File metadata and access after upload. Find by id, delete, and generate signed download URLs from stored object URLs. System find-by-id accepts an organization id for internal callers. Files are owned by an organization and referenced by exports, bulk jobs, and attachments.
 - **Analytics - Financial Records Reports** → `references/resources/Analytics-Financial-Records-Reports.md` (3 ops) - Read-only GET analytics built on financial records: aggregated totals, grouped aggregations, and monthly breakdowns. Supports saved-query filters via queryId and standard date or dimension params. Used for dashboards, KPI tiles, and drill-down charts. Deprecated system variants exist for internal cross-service use and are excluded from public skill docs.
-- **Analytics - Financial Statements Reports** → `references/resources/Analytics-Financial-Statements-Reports.md` (3 ops) - DRE (income statement) and related financial-statement reports for a period. Endpoints return the main statement, financial measures, and result-composition breakdowns. All are GET-only and filterable by period and saved queries. Outputs feed P&L views and management reporting; no mutation endpoints.
+- **Analytics - Financial Statements Reports** → `references/resources/Analytics-Financial-Statements-Reports.md` (3 ops) - Customizable Demonstrativo (DRE V2) analytics. The canonical endpoint is GET /analytics/financial-statements/data, which returns the organization's configured structure lines with hierarchy and optional AV/AH. Filterable by period, grouping, tags, and saved queries. Internal transfers are always excluded. No mutation endpoints.
 - **Core - Financial Record Groups** → `references/resources/Core-Financial-Record-Groups.md` (3 ops) - Groups that tie related financial records together (e.g. split payments or linked entries). Create a group, find the group containing a given financial-record id, and delete a group. No list-all or partial-update endpoints. Groups help the UI and analytics treat multiple records as one logical transaction.
 - **Analytics - Cash Flow Reports** → `references/resources/Analytics-Cash-Flow-Reports.md` (3 ops) - Cash-flow analytics: full-period report, current-month snapshot, and projected cash flow. All endpoints are GET under /analytics/cash-flow with date and filter params. Projections extrapolate from scheduled and recurring inflows/outflows. No write operations; purely analytical read models.
 - **Analytics - Organization Balance** → `references/resources/Analytics-Organization-Balance.md` (3 ops) - Balance analytics per bank account and rolled up to organization total. GET endpoints return historical balance series, current per-account balances, and organization-wide total. Used for treasury views and balance-over-time charts. Derived from reconciled movements and account metadata; read-only.
+- **Core - Activity History** → `references/resources/Core-Activity-History.md` (2 ops) - Organization activity history built from core events. Lists who changed tracked resources, when, through which channel, and a sanitized summary of changed fields.
 - **Core - Contacts Export** → `references/resources/Core-Contacts-Export.md` (2 ops) - Export contacts in csv or xlsx format. POST /core/contacts/export schedules async export; POST …/export/sync returns the file immediately. List filters (types, sort, search, etc.) apply to exports. Use for CRM-style extracts and spreadsheet workflows.
 - **Core - Subcategories Export** → `references/resources/Core-Subcategories-Export.md` (2 ops) - Export subcategories in csv or xlsx format. POST /core/subcategories/export for async jobs; POST …/export/sync for immediate download. Exports respect list filters and sort options. Handy for chart-of-accounts reviews and migrations.
 - **Core - Tags Export** → `references/resources/Core-Tags-Export.md` (2 ops) - Export tags in csv or xlsx format. POST /core/tags/export schedules async export; POST …/export/sync returns the file synchronously. Same scope as the organization tag list. Use for backup or bulk review of labeling conventions.

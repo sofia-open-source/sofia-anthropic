@@ -1,6 +1,6 @@
 # Financial Schemas
 
-16 schemas in this group.
+15 schemas in this group.
 
 | Schema | Type | Description |
 |--------|------|-------------|
@@ -12,7 +12,6 @@
 | [FinancialRecordRadarItemTagEntity](FinancialRecordRadarItemTagEntity.md) | object |  |
 | [FinancialRecordsBulkCreateFilePreviewEntity](FinancialRecordsBulkCreateFilePreviewEntity.md) | object |  |
 | [FinancialRecordRadarItemAutoExecuteSettingEntity](FinancialRecordRadarItemAutoExecuteSettingEntity.md) | object |  |
-| [FinancialStatementReportEntity](FinancialStatementReportEntity.md) | object |  |
 | [FinancialMeasuresReportEntity](FinancialMeasuresReportEntity.md) | object |  |
 | [FinancialResultCompositionReportEntity](FinancialResultCompositionReportEntity.md) | object |  |
 | [FinancialRecordsInvoicesAssociationEntity](FinancialRecordsInvoicesAssociationEntity.md) | object |  |
