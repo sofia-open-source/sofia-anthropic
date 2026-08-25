@@ -20,6 +20,4 @@
 | `destinationBankAccountId` | string | Yes | Conta de destino (entrada). |
 | `originSubcategoryId` | string | Yes | Subcategoria de origem (saída). |
 | `destinationSubcategoryId` | string | Yes | Subcategoria de destino (entrada). |
-| `originBankTransactionId` | string | No | Optional bank transaction identifier for the origin/debit (OUT) side to reconcile after creating the transfer. |
-| `destinationBankTransactionId` | string | No | Optional bank transaction identifier for the destination/credit (IN) side to reconcile after creating the transfer. |
 

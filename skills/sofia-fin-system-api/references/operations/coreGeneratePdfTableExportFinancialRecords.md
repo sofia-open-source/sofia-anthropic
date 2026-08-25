@@ -30,7 +30,6 @@
 | `competenceDateTo` | query | string | No |  |
 | `cashDateFrom` | query | string | No |  |
 | `cashDateTo` | query | string | No |  |
-| `includeNoContact` | query | boolean | No | When true, also matches financial records with no linked contact (null or missing). With contact IDs, matches selected contacts OR no contact; with no contact IDs, matches only records without a linked contact. |
 | `cashFlowDateFrom` | query | string | No | Start of the cash-flow date range. Matches completed records by cashDate and open records by dueDate (OR semantics). Ignored when combined with cashDateFrom/To or dueDateFrom/To. |
 | `cashFlowDateTo` | query | string | No | End of the cash-flow date range. Matches completed records by cashDate and open records by dueDate (OR semantics). Ignored when combined with cashDateFrom/To or dueDateFrom/To. |
 | `createdAtFrom` | query | any | No |  |

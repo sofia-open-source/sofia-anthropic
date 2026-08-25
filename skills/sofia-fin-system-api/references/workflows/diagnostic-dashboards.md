@@ -9,17 +9,15 @@ standard financial analysis and cash-flow practices; do not copy third-party con
 Use **actuals** (`completed=true`, grouped by `cashDate`), separate from projections. Pull data from
 `coreFindAllFinancialRecords` (period filters) or from the analytics endpoints
 (`analyticsGenerateCashFlowReport`, `analyticsGetOrganizationTotalBalance`,
-`analyticsGenerateAggregatedFinancialRecordsReport`, `analyticsGetFinancialStatementData`).
-
-For statement-based diagnostics, call **`analyticsGetFinancialStatementData`** (Demonstrativo V2).
-Use the organization's configured lines (`lines[].label`, `lines[].groupId`, `lines[].type`) — never
-hardcoded category group names or legacy fixed-slug indicators. Internal transfers are always excluded.
+`analyticsGenerateAggregatedFinancialRecordsReport`, `analyticsGenerateFinancialStatementReport`).
+Map indicators to the real top-level categories (operating revenue; personnel expenses; direct costs
+and expenses; income taxes; investments; financial expenses/revenue, etc.).
 
 ## Indicators (minimum 8)
 
-Derive ratios from V2 line totals and cash-flow/balance reports (for example operating cash margin;
-burn rate; personnel commitment when a personnel group line exists; tax burden; cash growth). Prefer
-`groupId` / line `id` over display names when mapping lines across renamed groups.
+Operating cash margin; burn rate (outflows/inflows, lower is better); personnel commitment
+(personnel/revenue); fixed-cost coverage; rent/revenue (lower is better); effective tax burden (lower is better);
+cash growth in the period; break-even point/revenue (lower is better).
 
 ## Traffic-light status
 
@@ -52,4 +50,3 @@ insights (2-4 actionable sentences). Score = weighted average (green=2, yellow=1
   subcategory classification; until then, approximate and disclose it, or ask which subcategories are fixed.
 - Benchmarks are defaults to calibrate.
 - This is a point-in-time snapshot (read-only); recurring diagnostics require scheduled automation.
-- Legacy fixed-group KPI cards (contribution margin, break-even, average ticket) were removed; use Demonstrativo V2 lines instead.

@@ -32,7 +32,6 @@
 | `user` | object | Yes | User who requested the import. |
 | `status` | enum: PENDING, PROCESSING, FINISHED | Yes | OFX import job request status. |
 | `populatedBankAccount` | object | Yes | Populated bank account. |
-| `nReconciledTransactions` | integer | Yes | Number of reconciled bank transactions imported by this OFX job request. |
 
 #### `items.executions`
 

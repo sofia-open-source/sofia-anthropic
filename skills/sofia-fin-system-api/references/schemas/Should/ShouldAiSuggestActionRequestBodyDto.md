@@ -78,7 +78,7 @@
 | `direction` | enum: IN, OUT | Yes | Direção do lançamento (entrada/saída). |
 | `dueDate` | any | No | Data de vencimento. |
 | `dueDateVariations` | string | No | Variações da data de vencimento. |
-| `contact` | string | Yes | Identificador do contato relacionado, quando houver. |
+| `contact` | string | Yes | Identificador do contato relacionado. |
 | `description` | string | Yes | Descrição do lançamento. |
 | `subcategory` | string | Yes | Identificador da subcategoria. |
 | `amount` | any | No | Valor do lançamento. É o valor em centavos. Exemplo: 10032 para R$ 100,32 |
