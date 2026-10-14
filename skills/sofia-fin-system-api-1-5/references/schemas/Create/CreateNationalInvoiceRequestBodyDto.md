@@ -19,6 +19,10 @@
 | `serviceMunicipalityCode` | string | Yes | IBGE code where service is provided. |
 | `tomador` | object | No | Service taker. |
 | `nationalTypeSpecific` | object | Yes | National NFSe-specific fields. |
+| `finalConsumer` | boolean | No |  |
+| `totalFederalTributesPercentage` | number | No |  |
+| `totalStateTributesPercentage` | number | No |  |
+| `totalMunicipalTributesPercentage` | number | No |  |
 
 ## Nested Fields
 

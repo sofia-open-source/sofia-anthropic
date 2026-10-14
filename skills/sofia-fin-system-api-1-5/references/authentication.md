@@ -6,7 +6,7 @@ The api supports only one endpoint without the context of the organization:
 
 | Method | Path | Summary | Details |
 |--------|------|---------|----------|
-| GET | `/core/users/me/organizations` | Busca todas as organizações de usuário. | [View](../operations/listMyOrganizations.md) |
+| GET | `/core/users/me/organizations` | Busca todas as organizações do usuário. | [View](../operations/listMyOrganizations.md) |
 
 Use this endpoint to retrieve all organizations that the user has access.
 
@@ -44,3 +44,7 @@ To call any other endpoint than listMyOrganizations, you must pass the $SOFIA_AP
 curl --location 'https://app-proxy-public-prod.sofia-fin-system.com/core/financial-records' \
 --header 'Authorization: Bearer ak_XG06M4DHJGD83908467KJGH675BKJ6N1H62HE:org_3DKY5bFEn8fNg4vna5Vf1pv1F97'
 ```
+
+## Claude Desktop or Claude Code with a cloud environment
+
+The user may also be using Claude Desktop or Claude Code with a configured cloud environment. In that environment, the Authorization header on calls to the Sofia API may already be set, automatically passing the access credentials.

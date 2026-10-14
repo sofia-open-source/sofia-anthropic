@@ -2,7 +2,7 @@
 name: sofia-fin-system-api-1-5
 description: Sofia API for financial management of bussiness. Provides management of bank accounts, financial records (in/out/paid/to be paid), invoices, contacts etc. Provides reports and bank reconciliation. Use when working with the Sofia Fin System API or when the user needs to interact with this API.
 metadata:
-  api-version: "1.5.24"
+  api-version: "1.5.25"
   openapi-version: "3.0.0"
 ---
 
@@ -19,7 +19,7 @@ This API documentation is split into multiple files for on-demand loading.
 references/
 ├── resources/      # 34 resource index files
 ├── operations/     # 139 operation detail files
-├── schemas/        # 82 schema groups, 217 schema files
+├── schemas/        # 85 schema groups, 220 schema files
 ├── business-rules.md
 ├── write-safety-protocol.md
 └── workflows/      # Guided multi-step API workflows
