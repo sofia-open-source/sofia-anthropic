@@ -11,6 +11,7 @@
 | `pageIndex` | query | number | No |  |
 | `pageSize` | query | number | No |  |
 | `textSearchTerm` | query | string | No |  |
+| `exactTextSearch` | query | boolean | No | When true, textSearchTerm is matched as a case-sensitive and accent-sensitive contiguous substring on the same fields as semantic search: description, pixKey, boletoCode, invoiceNumber, contactHints, subcategoryHints, bankAccountHints, tagsHints, amountVariations, finalAmountVariations, dueDateVariations, cashDateVariations, and competenceDateVariations. Fuzzy matching and prefixes are not used. When false or omitted, textSearchTerm keeps semantic search. |
 | `readPreference` | query | enum: primary, primaryPreferred, secondary... | No |  |
 | `semanticSearchTermInBase64` | query | string | No |  |
 | `sortBy` | query | enum: direction, dueDate, contact... | No |  |

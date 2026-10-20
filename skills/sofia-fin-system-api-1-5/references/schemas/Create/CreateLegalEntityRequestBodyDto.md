@@ -33,4 +33,5 @@
 | `responsibleLogin` | string | No | Login para acesso da prefeitura. |
 | `responsiblePassword` | string | No | Senha para acesso da prefeitura. |
 | `automaticSendNfEmail` | boolean | No | Whether to automatically send NF email. |
+| `specialTaxRegime` | enum: MICROEMPRESA_MUNICIPAL, ESTIMATIVA, SOCIEDADE_DE_PROFISSIONAIS... | No |  |
 

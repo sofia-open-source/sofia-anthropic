@@ -2,7 +2,7 @@
 name: sofia-fin-system-api-1-5
 description: Sofia API for financial management of bussiness. Provides management of bank accounts, financial records (in/out/paid/to be paid), invoices, contacts etc. Provides reports and bank reconciliation. Use when working with the Sofia Fin System API or when the user needs to interact with this API.
 metadata:
-  api-version: "1.5.25"
+  api-version: "1.5.26"
   openapi-version: "3.0.0"
 ---
 
@@ -18,8 +18,8 @@ This API documentation is split into multiple files for on-demand loading.
 ```
 references/
 ├── resources/      # 34 resource index files
-├── operations/     # 139 operation detail files
-├── schemas/        # 85 schema groups, 220 schema files
+├── operations/     # 140 operation detail files
+├── schemas/        # 86 schema groups, 222 schema files
 ├── business-rules.md
 ├── write-safety-protocol.md
 └── workflows/      # Guided multi-step API workflows
@@ -51,7 +51,7 @@ Supported methods: bearer token on header. See `references/authentication.md` fo
 
 - **Core - Bank Transactions** → `references/resources/Core-Bank-Transactions.md` (15 ops) - Imported bank statement lines from OFX manual import or open finance (Pluggy), used to reconcile against financial records. CRUD-style read/update/delete, reconcile and unreconcile, bulk archive/unarchive/reconcile, and AI-suggested actions for matching. OFX import flows schedule jobs, list executions, retry failures, and download failure reports. System endpoints support provider-driven create-or-update for integrated feeds.
 - **Core - Financial Records** → `references/resources/Core-Financial-Records.md` (11 ops) - The main resource of the system, represents an amount (paid/received/to be payed/to be received) for the organization on the system. It is used in the majority of all reports and is linked to many other resources like contacts, tags, bank transactions, radar items etc.
-- **Core - Legal entities** → `references/resources/Core-Legal-entities.md` (8 ops) - Legal entities (CNPJ) and fiscal registration data for the organization. CRUD, set default entity for invoicing, and get/patch Focus NFSe RPS settings per entity. Required for NFSe issuance and provider configuration. One organization may hold multiple entities but typically invoices from the default.
+- **Core - Legal entities** → `references/resources/Core-Legal-entities.md` (9 ops) - Legal entities (CNPJ) and fiscal registration data for the organization. CRUD, set default entity for invoicing, and get/patch Focus NFSe RPS settings per entity. Required for NFSe issuance and provider configuration. One organization may hold multiple entities but typically invoices from the default.
 - **Core - Contacts** → `references/resources/Core-Contacts.md` (8 ops) - People and companies (customers, suppliers, employees) linked to financial records. Full CRUD plus paginated list, find-by-id, and org-scoped lookups. Reference endpoints expose contact types and origins. Includes lookup of the special not-identified contact used when no counterparty is known.
 - **Core - Invoices** → `references/resources/Core-Invoices.md` (7 ops) - Fiscal invoice (NFSe) lifecycle for the organization: issue municipal (default) or national service invoices, cancel, list, and find by id. Invoice events expose status history; Focus NFe webhooks and scheduler/queue jobs sync state with the external provider. Creation and cancellation are the primary mutations; there is no generic partial-update endpoint.
 - **Core - Financial Record Radar Items** → `references/resources/Core-Financial-Record-Radar-Items.md` (7 ops) - Represents the intent to create(one or many)/update financial records on the system based on a WhatsApp message or email.

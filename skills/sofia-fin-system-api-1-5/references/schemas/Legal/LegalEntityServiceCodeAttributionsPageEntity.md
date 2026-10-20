@@ -20,6 +20,7 @@
 | `legalEntityId` | string | Yes | Identificador da entidade legal. |
 | `serviceCodeId` | string | Yes | Identificador do código de serviço. |
 | `isDefault` | boolean | Yes | Whether this attribution is the default for the legal entity. |
+| `customNfseRootJson` | object | No | Custom JSON deep-merged into the root of the Focus NFe NFSe payload. For municipal NFSe, a `servico` object is deep-merged into the generated `servico` block. |
 | `createdAt` | any | Yes | Data de criação. |
 | `updatedAt` | any | Yes | Data de atualização. |
 | `populatedServiceCode` | object | No | Service code loaded when the request `populate` query includes `serviceCode`. |

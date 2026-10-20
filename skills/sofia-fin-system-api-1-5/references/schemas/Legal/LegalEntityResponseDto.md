@@ -34,7 +34,10 @@
 | `municipalityNfseUnavailable` | boolean | Yes | True when the IBGE municipality is not served by Focus for NFSe (stored at create or municipality update). |
 | `nfseSendMunicipalRegistration` | boolean | Yes | Whether to include municipal registration in NFSe emission payloads. |
 | `isDefault` | boolean | Yes | Whether this legal entity is the default for the organization. |
+| `certificateBase64` | string | No | Digital certificate file in PFX or P12 format (base64). |
+| `certificatePassword` | string | No | Digital certificate password. |
 | `automaticSendNfEmail` | boolean | No | Whether to automatically send NF email. |
+| `specialTaxRegime` | enum: MICROEMPRESA_MUNICIPAL, ESTIMATIVA, SOCIEDADE_DE_PROFISSIONAIS... | No |  |
 | `createdAt` | string | Yes | Creation date of the legal entity. |
 | `updatedAt` | string | Yes | Last update date of the legal entity. |
 

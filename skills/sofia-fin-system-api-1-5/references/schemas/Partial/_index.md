@@ -1,9 +1,10 @@
 # Partial Schemas
 
-14 schemas in this group.
+15 schemas in this group.
 
 | Schema | Type | Description |
 |--------|------|-------------|
+| [PartialUpdateLegalEntityServiceCodeAttributionRequestBodyDto](PartialUpdateLegalEntityServiceCodeAttributionRequestBodyDto.md) | object |  |
 | [PartialUpdateContactRequestBodyDto](PartialUpdateContactRequestBodyDto.md) | object |  |
 | [PartialUpdateCategoryRequestBodyDto](PartialUpdateCategoryRequestBodyDto.md) | object |  |
 | [PartialUpdateSubcategoryRequestBodyDto](PartialUpdateSubcategoryRequestBodyDto.md) | object |  |

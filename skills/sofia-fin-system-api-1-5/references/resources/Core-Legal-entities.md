@@ -14,3 +14,4 @@ Legal entities (CNPJ) and fiscal registration data for the organization. CRUD, s
 | POST | `/core/legal-entities/{id}/set-as-default` | Define uma entidade legal como padrão da organização. | [View](../operations/coreSetDefaultLegalEntity.md) |
 | GET | `/core/legal-entities/{id}/focus-nfse-rps-settings` | Consulta série e próximo RPS de NFSe municipal em produção na Focus NFe. | [View](../operations/coreFindLegalEntityFocusNfseRpsSettings.md) |
 | PATCH | `/core/legal-entities/{id}/focus-nfse-rps-settings` | Atualiza série e/ou próximo RPS de NFSe municipal em produção na Focus NFe. | [View](../operations/coreUpdateLegalEntityFocusNfseRpsSettings.md) |
+| GET | `/core/legal-entities/special-tax-regimes` | Lista os possíveis regimes especiais de tributação. | [View](../operations/coreListSpecialTaxRegimeOptions.md) |

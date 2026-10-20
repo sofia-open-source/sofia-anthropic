@@ -30,4 +30,5 @@
 | `responsiblePassword` | any | No | Senha para acesso da prefeitura. |
 | `nfseSendMunicipalRegistration` | boolean | No | Whether to include municipal registration in NFSe emission payloads. |
 | `automaticSendNfEmail` | boolean | No | Whether to automatically send NF email. |
+| `specialTaxRegime` | enum: MICROEMPRESA_MUNICIPAL, ESTIMATIVA, SOCIEDADE_DE_PROFISSIONAIS... | No |  |
 
