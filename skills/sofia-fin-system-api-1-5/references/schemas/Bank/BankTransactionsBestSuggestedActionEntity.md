@@ -45,5 +45,6 @@
 | `pixKey` | string | No |  |
 | `contactHint` | string | No |  |
 | `subcategoryHint` | string | No |  |
+| `tags` | string[] | No |  |
 | `reason` | string | No |  |
 

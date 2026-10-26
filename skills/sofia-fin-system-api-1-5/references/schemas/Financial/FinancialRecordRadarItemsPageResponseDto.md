@@ -19,6 +19,7 @@
 | `ownerOrganization` | string | Yes | Identificador da organização dona do registro. |
 | `origin` | enum: WHATSAPP_AGENT, EMAIL_FORWARDING_INTEGRATION | Yes | Origem do registro. |
 | `nature` | enum: WHATSAPP_MESSAGE, EMAIL_MESSAGE | Yes | Natureza do registro. |
+| `documentType` | enum: BOLETO, NFE, NFSE... | No | Classified source document type of the radar item. |
 | `status` | enum: PENDING, LINKED, ARCHIVED | Yes | Status do registro. |
 | `folder` | enum: MAIN, SPAM | Yes | Pasta do registro. |
 | `links` | string[] | Yes | Ids dos registros financeiros vinculados. |
@@ -38,6 +39,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `operation` | enum: CREATE, CREATE_MANY, LINK_TO_THIS_RADAR_ITEM... | Yes | Operação sugerida. |
+| `ordinalConfidenceScore` | enum: LOW, MEDIUM, HIGH | No | Ordinal confidence of the suggested match, when produced by the matcher. |
 | `financialRecordRadarRawCreateFinancialRecordRequest` | object | No | Dados para criar registro financeiro. |
 | `financialRecordRadarRawCreateManyFinancialRecordsRequest` | object | No | Dados para criar múltiplos registros financeiros. |
 | `financialRecordRadarRawPartialUpdateFinancialRecordRequest` | object | No | Dados para atualizar parcialmente registro financeiro. |
@@ -48,6 +50,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `operation` | enum: CREATE, CREATE_MANY, LINK_TO_THIS_RADAR_ITEM... | Yes | Operação sugerida. |
+| `ordinalConfidenceScore` | enum: LOW, MEDIUM, HIGH | No | Ordinal confidence of the suggested match, when produced by the matcher. |
 | `financialRecordRadarProcessedCreateFinancialRecordRequest` | object | No | Dados finais para criar registro financeiro. |
 | `financialRecordRadarProcessedCreateManyFinancialRecordsRequest` | object | No | Dados finais para criar múltiplos registros financeiros. |
 | `financialRecordRadarProcessedPartialUpdateFinancialRecordRequest` | object | No | Dados finais para atualizar parcialmente registro financeiro. |

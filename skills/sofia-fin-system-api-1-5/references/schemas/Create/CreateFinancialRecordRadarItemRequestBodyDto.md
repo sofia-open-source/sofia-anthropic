@@ -9,6 +9,7 @@
 | `ownerOrganization` | string | Yes | Identificador da organização dona do registro. |
 | `origin` | enum: WHATSAPP_AGENT, EMAIL_FORWARDING_INTEGRATION | Yes | Origem do registro. |
 | `nature` | enum: WHATSAPP_MESSAGE, EMAIL_MESSAGE | Yes | Natureza do registro. |
+| `documentType` | enum: BOLETO, NFE, NFSE... | No | Classified source document type of the radar item. |
 | `status` | enum: PENDING, LINKED, ARCHIVED | Yes | Status do registro. |
 | `folder` | enum: MAIN, SPAM | Yes | Pasta do registro. |
 | `delayedTo` |  | No | Data para a qual o registro foi adiado. |
@@ -23,6 +24,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `operation` | enum: CREATE, CREATE_MANY, LINK_TO_THIS_RADAR_ITEM... | Yes | Operação sugerida. |
+| `ordinalConfidenceScore` | enum: LOW, MEDIUM, HIGH | No | Ordinal confidence of the suggested match, when produced by the matcher. |
 | `financialRecordRadarRawCreateFinancialRecordRequest` | object | No | Dados para criar registro financeiro. |
 | `financialRecordRadarRawCreateManyFinancialRecordsRequest` | object | No | Dados para criar múltiplos registros financeiros. |
 | `financialRecordRadarRawPartialUpdateFinancialRecordRequest` | object | No | Dados para atualizar parcialmente registro financeiro. |

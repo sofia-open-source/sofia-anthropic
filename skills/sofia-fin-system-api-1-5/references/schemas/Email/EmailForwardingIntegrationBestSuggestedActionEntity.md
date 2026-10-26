@@ -7,6 +7,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `operation` | enum: CREATE, UPDATE, CREATE_MANY... | No |  |
+| `documentType` | enum: BOLETO, NFE, NFSE... | No | Classified source document type of the radar item. |
 | `createData` | object | No |  |
 | `updateData` | object | No |  |
 | `createManyData` | object | No |  |
@@ -41,6 +42,7 @@
 | `pixKey` | string | No |  |
 | `contactHint` | string | No |  |
 | `subcategoryHint` | string | No |  |
+| `tags` | string[] | No |  |
 | `reason` | string | No |  |
 
 ### `updateData`
@@ -72,6 +74,7 @@
 | `pixKey` | string | No |  |
 | `contactHint` | string | No |  |
 | `subcategoryHint` | string | No |  |
+| `tags` | string[] | No |  |
 | `reason` | string | No |  |
 
 #### `updateData.extractedFields`
@@ -95,6 +98,7 @@
 | `pixKey` | string | No |  |
 | `contactHint` | string | No |  |
 | `subcategoryHint` | string | No |  |
+| `tags` | string[] | No |  |
 | `reason` | string | No |  |
 
 ### `createManyData`
@@ -132,5 +136,6 @@
 | `pixKey` | string | No |  |
 | `contactHint` | string | No |  |
 | `subcategoryHint` | string | No |  |
+| `tags` | string[] | No |  |
 | `reason` | string | No |  |
 
