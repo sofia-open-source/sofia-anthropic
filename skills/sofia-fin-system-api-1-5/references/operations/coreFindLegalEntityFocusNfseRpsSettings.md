@@ -1,7 +1,7 @@
 # GET /core/legal-entities/{id}/focus-nfse-rps-settings
 
 **Resource:** [Core - Legal entities](../resources/Core-Legal-entities.md)
-**Consulta série e próximo RPS de NFSe municipal em produção na Focus NFe.**
+**Consulta série e próximo RPS/DPS de NFSe municipal e nacional em produção na Focus NFe.**
 **Operation ID:** `coreFindLegalEntityFocusNfseRpsSettings`
 
 ## Parameters

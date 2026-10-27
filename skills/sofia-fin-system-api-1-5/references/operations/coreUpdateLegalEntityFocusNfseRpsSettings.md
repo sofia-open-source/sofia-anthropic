@@ -1,7 +1,7 @@
 # PATCH /core/legal-entities/{id}/focus-nfse-rps-settings
 
 **Resource:** [Core - Legal entities](../resources/Core-Legal-entities.md)
-**Atualiza série e/ou próximo RPS de NFSe municipal em produção na Focus NFe.**
+**Atualiza série e/ou próximo RPS/DPS de NFSe municipal e/ou nacional em produção na Focus NFe.**
 **Operation ID:** `coreUpdateLegalEntityFocusNfseRpsSettings`
 
 ## Parameters
