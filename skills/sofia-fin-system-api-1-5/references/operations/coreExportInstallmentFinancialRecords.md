@@ -15,8 +15,10 @@
 | `direction` | query | enum: IN, OUT | No |  |
 | `firstInstallmentDateFrom` | query | string | No |  |
 | `firstInstallmentDateTo` | query | string | No |  |
-| `contact` | query | string | No |  |
-| `subcategory` | query | string | No |  |
+| `contact` | query | string[] | No | Contact ids to filter by. |
+| `subcategory` | query | string[] | No | Subcategory ids to filter by. |
+| `amountFrom` | query | any | No | Minimum installment plan amount, in cents. |
+| `amountTo` | query | any | No | Maximum installment plan amount, in cents. |
 | `tags` | query | string[] | No |  |
 | `competenceDateFrom` | query | string | No |  |
 | `competenceDateTo` | query | string | No |  |

@@ -43,6 +43,7 @@
 | `finalAmountTo` | any | No | Valor final do lançamento máximo. |
 | `installmentFinancialRecord` | string[] | No | Lista de IDs de parcelas para filtrar. |
 | `recurringFinancialRecord` | string[] | No | Lista de IDs de recorrências para filtrar. |
+| `financialRecordOrigin` | enum: INSTALLMENT, RECURRING, STANDALONE | No | INSTALLMENT matches records linked to an installment plan, RECURRING matches records linked to a recurrence, and STANDALONE matches records with neither parent. |
 | `reconciled` | boolean | No |  |
 | `subcategory` | string[] | No | Lista de IDs de subcategorias para filtrar. |
 | `tags` | string[] | No | Lista de IDs de tags para filtrar. |

@@ -8,6 +8,7 @@ Parent financial records split into installments, each with its own due date and
 |--------|------|---------|----------|
 | GET | `/core/installment-financial-records` | Find all installment financial records. | [View](../operations/coreFindAllInstallmentFinancialRecords.md) |
 | POST | `/core/installment-financial-records` | Create a new installment financial record. | [View](../operations/coreCreateInstallmentFinancialRecord.md) |
+| GET | `/core/installment-financial-records/aggregated-result` | Sum installment financial records for the current filters. | [View](../operations/coreGetInstallmentFinancialRecordsAggregatedResult.md) |
 | GET | `/core/installment-financial-records/{id}` | Find an installment financial record by ID. | [View](../operations/coreFindByIdInstallmentFinancialRecord.md) |
 | DELETE | `/core/installment-financial-records/{id}` | Remove an installment financial record. | [View](../operations/coreRemoveInstallmentFinancialRecord.md) |
 | PATCH | `/core/installment-financial-records/{id}` | Partially update an installment financial record. | [View](../operations/corePartialUpdateInstallmentFinancialRecord.md) |

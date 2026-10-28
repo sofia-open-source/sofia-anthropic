@@ -329,6 +329,7 @@
 | `number` | string | Yes | Número da conta ou cartão. |
 | `considerInCashFlow` | boolean | Yes | Indica se a conta deve ser considerada nos cálculos de fluxo de caixa. |
 | `isAutomatic` | boolean | Yes | Indica se a conta é automática ou manual. |
+| `ignoreOfxTimezone` | boolean | No | Indicates whether the OFX timezone must be ignored when importing bank transactions (only the date is used, at noon in America/Sao_Paulo). |
 | `isDefault` | boolean | Yes | Indica se a conta é a padrão. |
 | `initialBalanceDate` | any | No | Data do saldo inicial da conta bancária. |
 | `initialBalanceAmount` | any | No | Valor do saldo inicial. |

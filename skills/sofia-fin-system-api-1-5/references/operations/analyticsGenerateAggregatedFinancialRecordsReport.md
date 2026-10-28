@@ -28,6 +28,7 @@
 | `finalAmountTo` | query | string | No | Maximum final record amount. |
 | `installmentFinancialRecord` | query | string | No | Installment financial record ID |
 | `recurringFinancialRecord` | query | string | No | Recurring financial record ID |
+| `financialRecordOrigin` | query | enum: INSTALLMENT, RECURRING, STANDALONE | No | INSTALLMENT matches records linked to an installment plan, RECURRING matches records linked to a recurrence, and STANDALONE matches records with neither parent. |
 | `reconciled` | query | string | No | Reconciliation status |
 | `subcategory` | query | string | No | Subcategory ID |
 | `tags` | query | string | No | Tag IDs |

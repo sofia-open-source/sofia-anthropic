@@ -9,6 +9,7 @@
 | `name` | string | No | Nome da conta bancária. |
 | `number` | string | No | Número da conta ou cartão. |
 | `considerInCashFlow` | boolean | No | Indica se a conta deve ser considerada nos cálculos de fluxo de caixa. |
+| `ignoreOfxTimezone` | boolean | No | Indicates whether the OFX timezone must be ignored when importing bank transactions (only the date is used, at noon in America/Sao_Paulo). |
 | `isDefault` | boolean | No | Indica se a conta é a padrão. |
 | `initialBalanceDate` | string | No | Data do saldo inicial da conta bancária. |
 | `initialBalanceAmount` | string | No |  |

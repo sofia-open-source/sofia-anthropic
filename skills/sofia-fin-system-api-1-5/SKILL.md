@@ -2,7 +2,7 @@
 name: sofia-fin-system-api-1-5
 description: Sofia API for financial management of bussiness. Provides management of bank accounts, financial records (in/out/paid/to be paid), invoices, contacts etc. Provides reports and bank reconciliation. Use when working with the Sofia Fin System API or when the user needs to interact with this API.
 metadata:
-  api-version: "1.5.31"
+  api-version: "1.5.32"
   openapi-version: "3.0.0"
 ---
 
@@ -18,8 +18,8 @@ This API documentation is split into multiple files for on-demand loading.
 ```
 references/
 ├── resources/      # 34 resource index files
-├── operations/     # 140 operation detail files
-├── schemas/        # 86 schema groups, 222 schema files
+├── operations/     # 142 operation detail files
+├── schemas/        # 86 schema groups, 224 schema files
 ├── business-rules.md
 ├── write-safety-protocol.md
 └── workflows/      # Guided multi-step API workflows
@@ -56,11 +56,11 @@ Supported methods: bearer token on header. See `references/authentication.md` fo
 - **Core - Invoices** → `references/resources/Core-Invoices.md` (7 ops) - Fiscal invoice (NFSe) lifecycle for the organization: issue municipal (default) or national service invoices, cancel, list, and find by id. Invoice events expose status history; Focus NFe webhooks and scheduler/queue jobs sync state with the external provider. Creation and cancellation are the primary mutations; there is no generic partial-update endpoint.
 - **Core - Financial Record Radar Items** → `references/resources/Core-Financial-Record-Radar-Items.md` (7 ops) - Represents the intent to create(one or many)/update financial records on the system based on a WhatsApp message or email.
 - **Core - Bank Accounts** → `references/resources/Core-Bank-Accounts.md` (7 ops) - Organization bank accounts: checking, savings, and credit card. CRUD, paginated list, find-by-id, org-scoped list, and account-type reference data. Supports open-finance lookup by Pluggy item id for linked accounts. Accounts anchor bank transactions and balance analytics.
+- **Core - Recurring Financial Records** → `references/resources/Core-Recurring-Financial-Records.md` (7 ops) - Recurrence templates that define rules for seeding future financial records (frequency, amounts, contacts, categories, etc.). Full CRUD plus POST /many for batch creation of templates. Internal scheduler and queue workers activate templates and materialize due occurrences into financial records. Active templates drive automated bookkeeping without manual entry for each period.
 - **Core - Subcategories** → `references/resources/Core-Subcategories.md` (6 ops) - Expense and revenue subcategories under system-managed categories. Org-owned CRUD, paginated list, find-by-id or slug, and org-scoped listing. Subcategories classify financial records in reports and budgets. Categories themselves are not mutated via this API.
-- **Core - Recurring Financial Records** → `references/resources/Core-Recurring-Financial-Records.md` (6 ops) - Recurrence templates that define rules for seeding future financial records (frequency, amounts, contacts, categories, etc.). Full CRUD plus POST /many for batch creation of templates. Internal scheduler and queue workers activate templates and materialize due occurrences into financial records. Active templates drive automated bookkeeping without manual entry for each period.
+- **Core - Installment Financial Records** → `references/resources/Core-Installment-Financial-Records.md` (6 ops) - Parent financial records split into installments, each with its own due date and amount. Supports create, paginated list, find-by-id, partial update, and delete on /core/installment-financial-records. List endpoints accept filters and populate related data. Installments are the template from which individual financial-record lines can be generated over time.
 - **Core - Tags** → `references/resources/Core-Tags.md` (5 ops) - Free-form classification tags attached to financial records. CRUD, paginated list, find-by-id, and org-scoped tag list. Tags enable flexible filtering and reporting dimensions beyond categories. Scoped to the leaf organization.
 - **Core - Financial records invoices associations** → `references/resources/Core-Financial-records-invoices-associations.md` (5 ops) - Explicit links between financial records and issued invoices (NFSe). Create one association, create many in batch, paginated list with filters, find-by-id, and delete. There is no update endpoint; remove and recreate to change a link. Associations support reporting and audit trails where a payment or revenue line ties to a fiscal document.
-- **Core - Installment Financial Records** → `references/resources/Core-Installment-Financial-Records.md` (5 ops) - Parent financial records split into installments, each with its own due date and amount. Supports create, paginated list, find-by-id, partial update, and delete on /core/installment-financial-records. List endpoints accept filters and populate related data. Installments are the template from which individual financial-record lines can be generated over time.
 - **Toolkit - Files upload** → `references/resources/Toolkit-Files-upload.md` (4 ops) - Two-step upload to Google Cloud Storage. Create upload request returns fileId and a signed PUT URL; after the client uploads bytes, confirm upload marks the file complete. User routes live under /toolkit/files/upload; system routes under /toolkit/organizations/:organizationId/files/upload for cross-service uploads. Used by bulk import, attachments, and export download prep.
 - **Toolkit - Files** → `references/resources/Toolkit-Files.md` (4 ops) - File metadata and access after upload. Find by id, delete, and generate signed download URLs from stored object URLs. System find-by-id accepts an organization id for internal callers. Files are owned by an organization and referenced by exports, bulk jobs, and attachments.
 - **Analytics - Financial Records Reports** → `references/resources/Analytics-Financial-Records-Reports.md` (3 ops) - Read-only GET analytics built on financial records: aggregated totals, grouped aggregations, and monthly breakdowns. Supports saved-query filters via queryId and standard date or dimension params. Used for dashboards, KPI tiles, and drill-down charts. Deprecated system variants exist for internal cross-service use and are excluded from public skill docs.

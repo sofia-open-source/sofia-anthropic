@@ -28,6 +28,7 @@
 | `finalAmountTo` | query | any | No | Valor final do lançamento máximo. |
 | `installmentFinancialRecord` | query | string[] | No | Lista de IDs de parcelas para filtrar. |
 | `recurringFinancialRecord` | query | string[] | No | Lista de IDs de recorrências para filtrar. |
+| `financialRecordOrigin` | query | enum: INSTALLMENT, RECURRING, STANDALONE | No | INSTALLMENT matches records linked to an installment plan, RECURRING matches records linked to a recurrence, and STANDALONE matches records with neither parent. |
 | `reconciled` | query | boolean | No |  |
 | `subcategory` | query | string[] | No | Lista de IDs de subcategorias para filtrar. |
 | `tags` | query | string[] | No | Lista de IDs de tags para filtrar. |

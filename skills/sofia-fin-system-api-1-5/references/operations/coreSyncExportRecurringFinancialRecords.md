@@ -15,10 +15,11 @@
 | `direction` | query | enum: IN, OUT | No |  |
 | `firstOccurrenceDateFrom` | query | string | No |  |
 | `firstOccurrenceDateTo` | query | string | No |  |
-| `contact` | query | string | No |  |
-| `subcategory` | query | string | No |  |
+| `contact` | query | string[] | No | Contact ids to filter by. |
+| `subcategory` | query | string[] | No | Subcategory ids to filter by. |
 | `amountFrom` | query | any | No |  |
 | `amountTo` | query | any | No |  |
+| `frequency` | query | enum: WEEKLY, MONTHLY, YEARLY | No | Recurrence frequency to filter by. |
 | `tags` | query | any | No |  |
 | `repetitionDay` | query | number | No |  |
 | `repetitionMonth` | query | number | No |  |
