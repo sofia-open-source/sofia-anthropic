@@ -7,6 +7,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `nfsen` | object | Yes |  |
+| `aiDeny` | object[] | No |  |
 
 ## Nested Fields
 
@@ -24,4 +25,11 @@
 | `totalTaxationIndicatorDepreceated` | object | Yes |  |
 | `taxReformRequired` | object | Yes |  |
 | `totalTributesPercentageRequired` | object | Yes |  |
+
+### `aiDeny`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `organizationId` | string | Yes |  |
+| `denyAgentNames` | any | Yes |  |
 
