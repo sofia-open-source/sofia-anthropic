@@ -7,6 +7,7 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `requester` | object | Yes |  |
+| `allowedOperation` | enum: CREATE_ONLY, UPDATE_ONLY, ANY | No | Operação permitida para a sugestão de melhor ação |
 | `bankTransactionId` | string | Yes | ID da transação bancária para obter sugestões de melhor ação |
 
 ## Nested Fields
