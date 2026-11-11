@@ -15,6 +15,7 @@
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
+| `nationalForcedMunicipalityCodes` | string[] | No |  |
 | `policies` | object | Yes |  |
 
 #### `nfsen.policies`
