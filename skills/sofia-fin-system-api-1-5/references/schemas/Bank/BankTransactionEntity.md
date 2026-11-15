@@ -45,6 +45,7 @@
 | `categoryId` | string | No | Identificador da categoria da movimentação financeira. |
 | `operationType` | string | No | Tipo de operação da movimentação financeira. |
 | `searchScore` | number | No | Pontuação de busca da movimentação financeira. |
+| `aiSuggestionMetadata` | any | No | Metadados da sugestão AI da movimentação financeira. |
 | `createdAt` |  | Yes | Data de criação da movimentação financeira. |
 | `updatedAt` |  | Yes | Data de atualização da movimentação financeira. |
 | `importedAt` | any | No | Data de importação da movimentação financeira. |

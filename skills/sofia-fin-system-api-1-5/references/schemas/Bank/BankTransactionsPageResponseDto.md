@@ -63,6 +63,7 @@
 | `categoryId` | string | No | Identificador da categoria da movimentação financeira. |
 | `operationType` | string | No | Tipo de operação da movimentação financeira. |
 | `searchScore` | number | No | Pontuação de busca da movimentação financeira. |
+| `aiSuggestionMetadata` | any | No | Metadados da sugestão AI da movimentação financeira. |
 | `createdAt` | string | Yes | Creation date of the bank transaction. |
 | `updatedAt` | string | Yes | Last update date of the bank transaction. |
 | `importedAt` | string | No | Bank transaction import date. |

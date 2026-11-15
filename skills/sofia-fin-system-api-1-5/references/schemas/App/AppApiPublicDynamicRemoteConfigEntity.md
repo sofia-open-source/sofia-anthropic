@@ -8,6 +8,7 @@
 |-------|------|----------|-------------|
 | `nfsen` | object | Yes |  |
 | `aiDeny` | object[] | No |  |
+| `txAiSuggestion` | object | No |  |
 
 ## Nested Fields
 
@@ -16,16 +17,16 @@
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `nationalForcedMunicipalityCodes` | string[] | No |  |
-| `policies` | object | Yes |  |
+| `policies` | object | No |  |
 
 #### `nfsen.policies`
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `percentageRateMunicipalitySpecificDepreceated` | object | Yes |  |
-| `totalTaxationIndicatorDepreceated` | object | Yes |  |
-| `taxReformRequired` | object | Yes |  |
-| `totalTributesPercentageRequired` | object | Yes |  |
+| `percentageRateMunicipalitySpecificDepreceated` | object | No |  |
+| `totalTaxationIndicatorDepreceated` | object | No |  |
+| `taxReformRequired` | object | No |  |
+| `totalTributesPercentageRequired` | object | No |  |
 
 ### `aiDeny`
 
@@ -33,4 +34,11 @@
 |-------|------|----------|-------------|
 | `organizationId` | string | Yes |  |
 | `denyAgentNames` | any | Yes |  |
+
+### `txAiSuggestion`
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `ttlInMinutesToBeConsideredOnQueueOrProcessing` | number | No |  |
+| `minTimeInMinutesBetweenSuggestionRequests` | number | No |  |
 
