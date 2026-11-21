@@ -235,6 +235,7 @@
 | `lastSyncAt` | any | No | Last Focus NFe consult sync attempt (used for sync queue prioritization). |
 | `defaultTypeSpecific` | object | No |  |
 | `nationalTypeSpecific` | object | No |  |
+| `customNfseRootJson` | object | No | Snapshot of the service code attribution custom JSON deep-merged into the Focus NFe payload when the invoice was issued. |
 | `createdAt` | any | Yes |  |
 | `updatedAt` | any | Yes |  |
 
